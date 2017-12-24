@@ -13,18 +13,19 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 					id
 					frontmatter {
 						path
+						date
 						title
 					}
 				}
 			}
 		}
 	}`)
-	.then(res => {
-		if(res.errors) {
-			return Promise.reject(res.errors);
+	.then(result => {
+		if(result.errors) {
+			return Promise.reject(result.errors);
 		}
 
-		res.data.allMarkdownRemark.edges.forEach(({node}) => {
+		result.data.allMarkdownRemark.edges.forEach(({node}) => {
 			createPage({
 				path: node.frontmatter.path,
 				component: postTemplate
