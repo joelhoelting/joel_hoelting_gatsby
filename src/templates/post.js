@@ -2,15 +2,14 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 export default function Template({data}) {
-	const { markdownRemark } = data; 
+	const { markdownRemark: post } = data;
 	// data.markdownRemark holds our post data
-  const { frontmatter, html } = markdownRemark;
 
 	return (
 		<div>
-			<h1>{frontmatter.title}</h1>
-			<h2>{frontmatter.date}</h2>
-			<div dangerouslySetInnerHTML={{__html: html}} />
+			<h1>{post.frontmatter.title}</h1>
+			<h2>{post.frontmatter.date}</h2>
+			<div dangerouslySetInnerHTML={{__html: post.html}} />
 		</div>
 	)
 }
@@ -26,4 +25,4 @@ export const postQuery = graphql`
 			}
 		}
 	}
-`;	
+`;
