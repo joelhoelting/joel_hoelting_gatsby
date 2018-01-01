@@ -1,0 +1,10 @@
+.flex-container {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-container > div {
+  flex: 1 0 auto;
+}
