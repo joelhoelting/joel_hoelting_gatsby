@@ -1,0 +1,44 @@
+svg#desktop-logo {
+  stroke-width: 3;
+  @media (max-width: 550px) {
+    display: none;
+  }
+  path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 2s linear forwards;
+    transition: fill-opacity 1s;
+    fill-opacity: 0;
+    fill: #00003C;
+  }
+
+}
+
+svg#mobile-logo {
+  stroke-width: 4;
+  display: none;
+  @media (max-width: 550px) {
+    display: block;
+  }
+  path {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: dash 3s linear forwards;
+    transition: fill-opacity 1s;
+    fill-opacity: 0;
+    fill: #00003C;
+  }
+}
+
+@keyframes dash {
+  80% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+}
