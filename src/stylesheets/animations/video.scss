@@ -1,0 +1,13 @@
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 3s;
+    &.fade-in {
+      opacity: 1;
+    }
+}
