@@ -4,7 +4,7 @@ import Logo from '../components/Logo';
 import Video from '../components/Video';
 
 class IndexPage extends React.Component {
-  
+
   loadVideo() {
     let desktopLogo = document.querySelector('#desktop-logo');
     let mobileLogo = document.querySelector('#mobile-logo');
@@ -15,7 +15,7 @@ class IndexPage extends React.Component {
       mobileLogo.classList.add('change-color');
       video.classList.add('fade-in');
       video.play();
-    }, 4000);
+    }, 2000);
   }
 
   componentDidMount() {
