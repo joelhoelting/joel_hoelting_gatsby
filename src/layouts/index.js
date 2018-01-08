@@ -5,8 +5,9 @@ import Helmet from 'react-helmet';
 
 import '../stylesheets/main.scss';
 
-const Header = () => (
-  <div id="header">
+require('prismjs/themes/prism-okaidia.css');
+
+const Navigation = () => (
     <nav id="navigation">
       <ul>
         <li><Link to="/blog">Blog</Link></li>
@@ -14,7 +15,6 @@ const Header = () => (
         <li><Link to="/about">Resume</Link></li>
       </ul>
     </nav>
-  </div>
 );
 
 const TemplateWrapper = ({ children }) => (
@@ -25,9 +25,8 @@ const TemplateWrapper = ({ children }) => (
         { name: 'description', content: 'Full Stack Web Developer' },
       ]}
     />
-
+    <Navigation />
     <div className="container">
-      <Header />
       {children()}
     </div>
   </div>

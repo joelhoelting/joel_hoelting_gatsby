@@ -11,7 +11,7 @@ Three of the most powerful methods for playing with Javascript arrays are `.filt
 
 Let's look at the following two arrays, one pretty simple and the other is an array filled with objects. Make sure to refer back to these arrays as you read on.
 
-```
+```javascript
 var emotions = ['happy', 'sad', 'anxious', 'shocked', 'scared', 'excited', 'emo'];
 
 const sandwiches = [
@@ -60,20 +60,20 @@ const sandwiches = [
 
 Let's say we want to create an array filled with emotions that are greater than a length of three letters. In other words, we want to set a **filter** for all words that are greater than 3 letters.
 
-{% highlight javascript %}
+```javascript
 const longWords = emotions.filter(function(emotion) {
   return emotion.length > 3
 })
 
 >longWords
 [ 'happy', 'anxious', 'shocked', 'scared', 'excited' ]
-{% endhighlight %}
+```
 
 The `longWords` constant now returns an array of words that are greater than three words. In this new array, 'sad' and 'emo' have been filtered out.
 
 Now let's create a filter for our more-complex array of sandwiches. Let's say we want to return an array of vegan-only sandwiches.
 
-{% highlight javascript %}
+```javascript
 const veganSandwiches = sandwiches.filter(function(sandwich) {
   return sandwich.vegan == true
 })
@@ -95,11 +95,11 @@ const veganSandwiches = sandwiches.filter(function(sandwich) {
     cost: 15,
     name: 'Hummus n\' Sprouts',
     vegan: true } ]
-{% endhighlight %}
+```
 
 Final example: let's say we want an array filled with sandwiches that have lettuce as one of their ingredients. We can use Array.prototype.includes() to accomplish that.
 
-{% highlight javascript %}
+```javascript
 const hasLettuce = sandwiches.filter(function(sandwich) {
   return sandwich.ingredients.includes('lettuce')
 })
@@ -117,7 +117,7 @@ const hasLettuce = sandwiches.filter(function(sandwich) {
     cost: 50,
     name: 'Butchery Loves Torture',
     vegan: false } ]
-{% endhighlight %}
+```
 
 The take away: unlike `.map()` and `.reduce()`, with `.filter()` we aren't changing or manipulating the elements of an array. Instead, we put a filter on an existing array and return a new array filled with elements that meet a certain criteria.
 
@@ -128,7 +128,7 @@ The take away: unlike `.map()` and `.reduce()`, with `.filter()` we aren't chang
 
 With `.map()` we are manipulating the elements themselves and returning a brand new array.
 
-{% highlight javascript %}
+```javascript
 const changeEmotions = emotions.map(function(emotion) {
   return "I am feeling " + emotion
 })
@@ -140,11 +140,11 @@ const changeEmotions = emotions.map(function(emotion) {
   'I am feeling shocked',
   'I am feeling scared',
   'I am feeling excited' ]
-{% endhighlight %}
+```
 
 Or let's say the cost of each of our sandwiches increases by 5 dollars due to a sagging economy:
 
-{% highlight javascript %}
+```javascript
 const increaseCosts = sandwiches.map(function(sandwich) {
   return {
     ingredients: sandwich.ingredients,
@@ -180,12 +180,11 @@ const increaseCosts = sandwiches.map(function(sandwich) {
     name: 'Butchery Loves Torture',
     vegan: false } ]
 
-{% endhighlight %}
+```
 
 The take away: with `.map()` we are manipulating elements in an array and returning a new array with the manipulated elements.
 
-<br>
-<h2>.reduce()</h2>
+##reduce()
 
 "The reduce() method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value." ([Reduce - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce?v=example))
 
@@ -193,7 +192,7 @@ Reduce is more aimed at consolidating elements or element properties into one va
 
 Example 1: We can combine all of our emotions into one super-string.
 
-{% highlight javascript %}
+```javascript
 const superEmotions3 = emotions.reduce(function(all, emotion, index) {
   if (index === emotions.length - 1) {
     return all + " and " + emotion
@@ -203,22 +202,22 @@ const superEmotions3 = emotions.reduce(function(all, emotion, index) {
 
 > superEmotions3
 'happy, sad, anxious, shocked, scared, excited and emo'
-{% endhighlight %}
+```
 
 Example #2: Consolidation is more useful when we want to add numbers together. For example, let's say we want to find the total cost of all of our sandwiches. Also note that we are setting a starting value of sum = 0 after the anonymous function. That number can be set to any starting number if you'd rather not start at 0. `.reduce()` will then iterate over the array and add the cost of each element to the total sum.
 
-{% highlight javascript %}
+```javascript
 const totalSandwichCosts = sandwiches.reduce(function(sum, sandwich, index) {
   return sum + sandwich.cost
 }, 0)
 
 > totalSandwichCosts
 145
-{% endhighlight %}
+```
 
 The initial value that you set can be anything (it doesn't have to be zero). For example we can take an array and get a new object by making the starting value equal to `{}`. We can easily make this starting value `[]` and the new return value will be an array instead of an object. In the below example I am using `.reduce()` to create one object with the sandwich names as the keys and the array of ingredients as the value of each key.
 
-{% highlight javascript %}
+```javascript
 const sandwichObject = sandwiches.reduce(function(all, sandwich, index) {
   all[sandwich.name] = sandwich.ingredients
   return all
@@ -231,11 +230,11 @@ const sandwichObject = sandwiches.reduce(function(all, sandwich, index) {
   'Fruit Fandango': [ 'mango', 'pineapple', 'avocado' ],
   'Hummus n\' Sprouts': [ 'hummus', 'bean sprouts', 'cucumbers' ],
   'Butchery Loves Torture': [ 'bacon', 'lettuce', 'tomato' ] }
-{% endhighlight %}
+```
 
 Example 3: And finally, lets get the total cost of all of our sandwiches.
 
-{% highlight javascript %}
+```javascript
 const totalSandwichCosts = sandwiches.reduce(function(sum, sandwich, index) {
   return sum + sandwich.cost
 }, 0)
@@ -251,6 +250,6 @@ const totalSandwichCostsPlusOneHundred = sandwiches.reduce(function(sum, sandwic
 
 > totalSandwichCostsPlusOneHundred
 245
-{% endhighlight %}
+```
 
 Hopefully you now have some understanding of these three powerful methods and an idea of which situations they might prove useful.

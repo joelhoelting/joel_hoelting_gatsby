@@ -8,7 +8,7 @@ svg#desktop-logo {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: dash 2s linear forwards;
-    transition: fill-opacity 1s, fill 4s ease, stroke 4s ease;
+    transition: fill 4s ease, stroke 4s ease;
     fill-opacity: 0;
     fill: #000;
   }
@@ -27,8 +27,8 @@ svg#mobile-logo {
     stroke: #000;
     stroke-dasharray: 1500;
     stroke-dashoffset: 1500;
-    animation: dash 3s linear forwards;
-    transition: fill-opacity 1s, fill 4s ease, stroke 4s ease;
+    animation: dash 2s linear forwards;
+    transition: fill 4s ease, stroke 4s ease;
     fill-opacity: 0;
     fill: #000;
   }

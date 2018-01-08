@@ -32,11 +32,11 @@ Now we will create two partials to render in our main application.html.erb. One 
 
 app/views/layouts/_messages.html.erb:
 
-{% highlight erb %}
+```ruby
 <%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>
 <%= content_tag(:div, flash[:notice], :id => "flash_notice") if flash[:notice] %>
 <%= content_tag(:div, flash[:alert], :id => "flash_alert") if flash[:alert] %>
-{% endhighlight %}
+```
 
 app/views/layouts/_navigation.html.erb:
 

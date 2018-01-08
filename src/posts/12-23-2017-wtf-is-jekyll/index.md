@@ -4,6 +4,7 @@ date: '2016-06-03'
 title: 'WTF is Jekyll?'
 published: true
 ---
+This is some beautiful code:
 
 Currently, the most popular platforms for building quick and simple websites are Wordpress and Jekyll. A Jekyll page can be posted on your GitHub account within minutes and has become a new standard in web development. Jekyll is a blog-focused, static-site generator. What is the difference between a static website and a dynamic website? A static website is the simplest type of site that can be built. It is designed for sites that have content that will remain static, or unchanging.
 
