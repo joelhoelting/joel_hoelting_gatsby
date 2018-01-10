@@ -7,40 +7,42 @@ published: true
 
 How to add Devise and Omniauth to your new Rails application:
 
-<h4>Step 1: Generate Your Rails Application</h4>
+#### Step 1: Generate Your Rails Application
 `rails new MyApplication`
 
-<h4>Step 2: Add the devise gem to your Gemfile</h4>
-`gem 'devise'`<br>
+#### Step 2: Add the devise gem to your Gemfile
+`gem 'devise'`
+
 `bundle install`
 
-<h4>Step 3: Install Devise and a Devise User</h4>
-`rails generate devise:install`<br>
-`rails generate devise User`<br>
+#### Step 3: Install Devise and a Devise User
+`rails generate devise:install`
+
+`rails generate devise User`
 
 I also want to add two additional columns (or attributes) to my Users table. I want to add user attributes for a provider and a uid. This is data we will receive from our Omniauth provider and will be saved to the database.<br>
 
-`rails g migration AddColumnsToUsers provider uid`<br>
+`rails g migration AddColumnsToUsers provider uid`
 
 The above command will create two columns that are strings by default.
 
 Now run the pending migrations with `rake db:migrate`
 
-<h4>Step 4: Create View Partials (Optional)</h4>
+####Step 4: Create View Partials (Optional)
 
 Now we will create two partials to render in our main application.html.erb. One is a navbar that will display links dependent on whether the current user is logged in. The other partial renders flash messages if they exist.
 
-app/views/layouts/_messages.html.erb:
+`app/views/layouts/_messages.html.erb:`
 
-```ruby
+```html
 <%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>
 <%= content_tag(:div, flash[:notice], :id => "flash_notice") if flash[:notice] %>
 <%= content_tag(:div, flash[:alert], :id => "flash_alert") if flash[:alert] %>
 ```
 
-app/views/layouts/_navigation.html.erb:
+`app/views/layouts/_navigation.html.erb:`
 
-{% highlight erb %}
+```html
 <% if current_user %>
   <li>Hello,<%= current_user.email %></li>
   <li><%= link_to "Log Out", destroy_user_session_path, :method => "delete" %></li>
@@ -48,11 +50,11 @@ app/views/layouts/_navigation.html.erb:
   <li><%= link_to "Sign In", new_user_session_path %></li>
   <li><%= link_to "Sign Up", new_user_registration_path %></li>
 <% end %>
-{% endhighlight %}
+```
 
 And finally call the partials in app/views/layouts/application.html.erb:
 
-{% highlight erb %}
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -64,9 +66,9 @@ And finally call the partials in app/views/layouts/application.html.erb:
     <%= yield %>
   </body>
 </html>
-{% endhighlight %}
+```
 
-<h4>Step 5: Implement Omniauth</h4>
+#### Step 5: Implement Omniauth
 
 Head over to the <a href="https://github.com/omniauth/omniauth">Omniauth gem on Github</a> and read the documentation to familiarize yourself with how it works. There is also a <a href="https://github.com/omniauth/omniauth/wiki/List-of-Strategies">community maintained list</a> of providers that your app can use to login/create new users via Omniauth. They range from well-known services like Google to obscure providers that you've probably never heard of before.
 
@@ -78,7 +80,7 @@ Now we need to add some more devise features to the Devise User Model. We will a
 
 Add the following code to /app/models/user.rb:
 
-{% highlight ruby %}
+```ruby
 class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
@@ -94,32 +96,32 @@ class User < ActiveRecord::Base
       end
   end
 end
-{% endhighlight %}
+```
 
 Now add your **AppID** and **SecretID** to /config/initializers/devise.rb:
 
-{% highlight ruby %}
+```ruby
 config.omniauth :amazon, APPID, SECRETID
-{% endhighlight %}
+```
 
 In /config/routes.rb, specify which controller will handle callbacks:
 
-{% highlight ruby %}
+```ruby
 devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
-{% endhighlight %}
+```
 
 Finally, create a callbacks controller and a method for your provider:
 
-{% highlight ruby %}
+```ruby
 class CallbacksController < Devise::OmniauthCallbacksController
     def amazon
         @user = User.from_omniauth(request.env["omniauth.auth"])
         sign_in_and_redirect @user
     end
 end
-{% endhighlight %}
+```
 
 On the login and signup pages you should now see an option to sign-in/sign-up via your provider. I have a recorded a video tutorial of the process if you are a visual learner:
 
-<iframe width="420" height="315" src="http://www.youtube.com/embed/8DdlW-lzowA" frameborder="0" allowfullscreen>
+<iframe style="display: block; margin: 0 auto;" width="420" height="315" src="http://www.youtube.com/embed/8DdlW-lzowA" frameborder="0" allowfullscreen>
 </iframe>

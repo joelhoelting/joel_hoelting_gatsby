@@ -9,7 +9,7 @@ published: true
 
 <p>2. Find the ip address of your development machine by typing in `ifconfig`.</p>
 
-{% include image.html url="/assets/img/img_blog/ifconfig.png" %}
+![](ifconfig.png)
 
 In this case, the ip address of my machine is `172.31.98.28`.
 

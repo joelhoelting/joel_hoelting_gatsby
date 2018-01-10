@@ -1,6 +1,6 @@
 import React from 'react';
 
-import video from '../assets/showcase.mp4';
+import video from '../videos/showcase.mp4';
 
 const Video = () => {
   return (

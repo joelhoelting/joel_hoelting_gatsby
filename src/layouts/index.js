@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 
 import '../stylesheets/main.scss';
 
+// Syntax Highlighting
 require('prismjs/themes/prism-okaidia.css');
 
 const Navigation = () => (
