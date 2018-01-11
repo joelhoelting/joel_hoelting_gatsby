@@ -32,4 +32,4 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 			});
 		});
 	});
-}
+};
