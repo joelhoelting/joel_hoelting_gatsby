@@ -55,6 +55,8 @@ print_vegetable(vegetable)
 tomato
 ```
 
+Another way to access variables outside the scope of a method is using instance and class variables. Simply prepend `@` or `@@` to the beginning of a variable declaration and the variable will be available inside the method. For example: `@vegetable = 'tomato'`. However, it important to understand the uses for instance/class variables before using them.
+
 How do you think Python handles scope?
 
 Like Javascript, Python will know about the variable assigned in global space:
