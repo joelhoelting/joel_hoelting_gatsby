@@ -1,30 +1,20 @@
 import React from 'react';
 import Logo from '../components/Logo';
-import Video from '../components/Video';
+
+var styles = {
+  base: {
+    height: '90vh',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
+};
 
 class IndexPage extends React.Component {
 
-  loadVideo() {
-    let desktopLogo = document.querySelector('#desktop-logo');
-    let mobileLogo = document.querySelector('#mobile-logo');
-    let video = document.querySelector('video');
-
-    setTimeout(function(){
-      desktopLogo.classList.add('change-color');
-      mobileLogo.classList.add('change-color');
-      video.classList.add('fade-in');
-      video.play();
-    }, 2000);
-  }
-
-  componentDidMount() {
-    window.addEventListener('load', this.loadVideo);
-  }
-
   render() {
     return (
-      <div className="flex-container">
-        <Video />
+      <div style={styles.base}>
         <Logo />
       </div>
     );

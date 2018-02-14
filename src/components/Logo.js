@@ -1,9 +1,24 @@
 import React from 'react';
+import Radium from 'radium';
+
+var styles = {
+  strokeWidth: '3',
+  desktop: {
+    '@media (max-width: 600px)': {
+      display: 'none'
+    }
+  },
+  mobile: {
+    '@media (min-width: 600px)': {
+      display: 'none'
+    }
+  }
+};
 
 const Logo = () => {
   return (
     <div>
-      <svg id="desktop-logo" className="mainLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1356.8 181.5">
+      <svg id="desktop-logo" style={[styles.desktop, styles]} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1356.8 181.5">
         <title>Joel Hoelting</title>
         <path id="J" d="M89.4,119.5c0,44.4-36.5,64.7-82.4,64.7V162.6c33.9,0,60.9-13.5,60.9-43.1V56.3H27.5V34.9H89.4Z" transform="translate(-5.5 -6.1)" fill="none" stroke="#000" />
         <path id="O" d="M120.2,55.4a75.5,75.5,0,0,1,107.8,0,76.8,76.8,0,0,1,0,108,75.5,75.5,0,0,1-107.8,0,76.8,76.8,0,0,1,0-108Zm92.5,15.4A55,55,0,0,0,174,54.6a53.6,53.6,0,0,0-38.2,16.2,54.6,54.6,0,0,0,0,77.3A53.6,53.6,0,0,0,174,164.3a55,55,0,0,0,38.6-93.5Z" transform="translate(-5.5 -6.1)" fill="none" stroke="#000" />
@@ -17,7 +32,7 @@ const Logo = () => {
         <path id="N" d="M1094.5,184.2V34.5l16.7.2L1183.9,140V34.7h21.4V184.2h-17.1L1116,79.8V184.2Z" transform="translate(-5.5 -6.1)" fill="none" stroke="#000" />
         <path id="G" d="M1336.6,88.3c-6-24.1-29-32.9-48-32.9-29.3,0-51.9,22.8-51.9,54.2s22.6,54.9,51.9,54.9c18.4,0,38-8.5,47-30.3h-55.3V112.6h80.5c-1.1,12.6-2.1,20.9-4.1,25.8v-.2c-10.2,28.6-41,47-68.1,47-41.8,0-73.4-31.6-73.4-75.6s32.2-75.8,73.4-75.8c28.6,0,63.2,14.7,71.1,54.4Z" transform="translate(-5.5 -6.1)" fill="none" stroke="#000" />
       </svg>
-      <svg id="mobile-logo" className="mainLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1288.2 622.7">
+      <svg id="mobile-logo" style={[styles.mobile, styles]} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1288.2 622.7">
         <title>Joel Hoelting</title>
         <path id="J" d="M453,210.9c0,69.6-57.2,101.4-129.1,101.4V278.5c53.2,0,95.3-21.1,95.3-67.6v-99H356V78.4h97Z" transform="translate(-43.6 -73.6)" fill="none" stroke="#000" />
         <path id="O" d="M501.2,110.5a118.6,118.6,0,0,1,84.3-35.5c33.1,0,62.9,13.7,84.6,35.5S705,162.1,705,195.2s-13.7,62.9-34.8,84.6a118.3,118.3,0,0,1-168.9,0c-21.1-21.7-34.8-51.5-34.8-84.6S480.1,132.3,501.2,110.5Zm144.9,24.1a86.1,86.1,0,0,0-60.6-25.4,84,84,0,0,0-59.9,25.4,85.6,85.6,0,0,0,0,121.1,84,84,0,0,0,59.9,25.4,86.1,86.1,0,0,0,60.6-146.5Z" transform="translate(-43.6 -73.6)" fill="none" stroke="#000" />
@@ -35,4 +50,4 @@ const Logo = () => {
   );
 };
 
-export default Logo;
+export default Radium(Logo);

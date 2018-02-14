@@ -1,25 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
-
-import '../stylesheets/main.scss';
+import Navigation from '../components/Navigation';
+import {StyleRoot} from 'radium';
 
 // Syntax Highlighting
 require('prismjs/themes/prism-okaidia.css');
 
-const Navigation = () => (
-    <nav id="navigation">
-      <ul>
-        <li><Link to="/blog">Blog</Link></li>
-        <li><Link to="/portfolio">Portfolio</Link></li>
-        <li><Link to="/about">Resume</Link></li>
-      </ul>
-    </nav>
-);
-
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <StyleRoot>
     <Helmet
       title="Joel Hoelting"
       meta={[
@@ -27,10 +16,15 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Navigation />
-    <div className="container">
+    <div
+      style={{
+        margin: '0 auto',
+        maxWidth: '980px'
+      }}
+    >
       {children()}
     </div>
-  </div>
+  </StyleRoot>
 );
 
 TemplateWrapper.propTypes = {

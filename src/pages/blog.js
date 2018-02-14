@@ -14,7 +14,6 @@ export default function Index({ data }) {
                 <Link key={post.id} to={post.frontmatter.path}>{post.frontmatter.title}</Link>
               </h1>
               <h2>{post.frontmatter.date}</h2>
-              <p>{post.excerpt}</p>
             </div>
           );
         })}
