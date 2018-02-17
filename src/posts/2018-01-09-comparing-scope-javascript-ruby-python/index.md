@@ -45,8 +45,8 @@ The method will only be able to access the variable if we pass it in as an argum
 ```ruby
 vegetable = 'tomato'
 
-def print_vegetable(arg)
-  puts "#{arg}"
+def print_vegetable(vegetable)
+  puts "#{vegetable}"
 end
 
 print_vegetable(vegetable)
@@ -55,7 +55,7 @@ print_vegetable(vegetable)
 tomato
 ```
 
-Another way to access variables outside the scope of a method is using instance and class variables. Simply prepend `@` or `@@` to the beginning of a variable declaration and the variable will be available inside the method. For example: `@vegetable = 'tomato'`. However, it important to understand the uses for instance/class variables before using them.
+Another way to access variables outside the scope of a method is using instance and class variables. Simply prepend `@` or `@@` to the beginning of a variable declaration and the variable will be available inside the method. For example: `@vegetable = 'tomato'`. However, it is important to understand best practices for using instance/class variables before using them.
 
 How do you think Python handles scope?
 

@@ -1,0 +1,17 @@
+.toggleNav-enter {
+  max-width: 0;
+  transition: max-width .3s ease;
+}
+
+.toggleNav-enter-active {
+  max-width: 100%;
+}
+
+.toggleNav-leave {
+  max-width: 100%;
+  transition: max-width .3s ease;
+}
+
+.toggleNav-leave-active {
+  max-width: 0;
+}
