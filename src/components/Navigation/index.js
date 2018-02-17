@@ -17,8 +17,14 @@ const Hamburger = (props) => {
         position: 'absolute',
         zIndex: 999,
       }}
-     >
-     <button onClick={(event) => handleChange(event)}>Click Me</button>
+      onClick={(event) => handleChange(event)}
+    >
+      <div id="hamburger" className={props.status ? 'active' : 'inactive'}>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   );
 };
@@ -45,7 +51,7 @@ class Navigation extends Component {
     if(this.state.isOpen){
       return (
         <div>
-          <Hamburger hello="hello" toggleNav={this.toggleNav}/>
+          <Hamburger status={this.state.isOpen} toggleNav={this.toggleNav}/>
           <CSSTransitionGroup
             transitionName="toggleNav"
             transitionEnterTimeout={300}
@@ -90,7 +96,7 @@ class Navigation extends Component {
     } else {
       return (
         <div>
-          <Hamburger toggleNav={this.toggleNav}/>
+          <Hamburger status={this.state.isOpen} toggleNav={this.toggleNav}/>
           <CSSTransitionGroup
             transitionName="toggleNav"
             transitionEnterTimeout={300}
