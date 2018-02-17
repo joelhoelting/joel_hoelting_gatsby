@@ -12,19 +12,11 @@ const Hamburger = (props) => {
   }
 
   return (
-    <div
-      style={{
-        position: 'absolute',
-        zIndex: 999,
-      }}
-      onClick={(event) => handleChange(event)}
-    >
-      <div id="hamburger" className={props.status ? 'active' : 'inactive'}>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+    <div id="hamburger" onClick={(event) => handleChange(event)} className={props.status ? 'active' : 'inactive'}>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   );
 };
@@ -61,7 +53,7 @@ class Navigation extends Component {
               style={{
                 height: '100%',
                 width: '100%',
-                background: 'navy',
+                background: '#24255d',
                 position: 'fixed',
                 zIndex: 1,
                 left: 0,
@@ -85,9 +77,10 @@ class Navigation extends Component {
                     fontSize: '4rem'
                   }}
                 />
-                <li className="link first"><Link onClick={this.toggleNav} to="/blog">Blog</Link></li>
+                <li className="link"><Link onClick={this.toggleNav} to="/">Home</Link></li>
+                <li className="link"><Link onClick={this.toggleNav} to="/blog">Blog</Link></li>
                 <li className="link"><Link onClick={this.toggleNav} to="/portfolio">Portfolio</Link></li>
-                <li className="link"><Link onClick={this.toggleNav} to="/about">Resume</Link></li>
+                <li className="link"><Link onClick={this.toggleNav} to="/resume">Resume</Link></li>
               </ul>
             </div>
           </CSSTransitionGroup>
