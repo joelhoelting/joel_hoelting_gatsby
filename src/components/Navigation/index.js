@@ -14,7 +14,7 @@ const Hamburger = (props) => {
   return (
     <div
       style={{
-        position: 'fixed',
+        position: 'absolute',
         zIndex: 999,
       }}
      >
@@ -79,7 +79,7 @@ class Navigation extends Component {
                     fontSize: '4rem'
                   }}
                 />
-                <li className="link"><Link onClick={this.toggleNav} to="/blog">Blog</Link></li>
+                <li className="link first"><Link onClick={this.toggleNav} to="/blog">Blog</Link></li>
                 <li className="link"><Link onClick={this.toggleNav} to="/portfolio">Portfolio</Link></li>
                 <li className="link"><Link onClick={this.toggleNav} to="/about">Resume</Link></li>
               </ul>
