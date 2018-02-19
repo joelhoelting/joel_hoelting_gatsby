@@ -1,6 +1,7 @@
 ---
 path: '/hamburger-animation-css-javascript'
 date: '2017-04-24'
+description: 'this is a description'
 title: "Tutorial: Animated Hamburger w/ CSS and Javascript"
 published: true
 ---

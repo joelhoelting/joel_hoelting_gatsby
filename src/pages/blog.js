@@ -36,6 +36,7 @@ export const pageQuery = graphql`
             title
             path
             date
+            description
           }
         }
       }

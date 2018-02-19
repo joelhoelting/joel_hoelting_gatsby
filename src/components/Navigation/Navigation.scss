@@ -3,7 +3,6 @@
   transition: max-height .3s ease;
   li {
     opacity: 0;
-    transition: opacity .2s ease;
   }
 }
 
@@ -11,12 +10,13 @@
   max-height: 100%;
   li {
     opacity: 1;
+    transition: opacity .2s 300ms ease;
   }
 }
 
 .toggleNav-leave {
   max-height: 100%;
-  transition: max-height .3s ease;
+  transition: max-height .3s 300ms ease;
   li {
     opacity: 0;
     transition: opacity .2s ease;
@@ -73,11 +73,13 @@
   }
   &.active span:nth-child(2) {
     transform: rotate(-45deg);
-    background: #fff;
+    background: #C60500;
+    height: 20px;
   }
   &.active span:nth-child(3) {
     transform: rotate(45deg);
-    background: #fff;
+    background: #C60500;
+    height: 20px;
   }
   &.active span:nth-child(4) {
     opacity: 0;

@@ -74,7 +74,12 @@ class Navigation extends Component {
                   scopeSelector=".link"
                   rules={{
                     margin: '20px 0',
-                    fontSize: '4rem'
+                    fontSize: '5rem',
+                    fontFamily: 'Code Bold',
+                    textShadow: '2px 2px #000',
+                    a: {
+                      color:'#C60500'
+                    }
                   }}
                 />
                 <li className="link"><Link onClick={this.toggleNav} to="/">Home</Link></li>
@@ -92,8 +97,8 @@ class Navigation extends Component {
           <Hamburger status={this.state.isOpen} toggleNav={this.toggleNav}/>
           <CSSTransitionGroup
             transitionName="toggleNav"
-            transitionEnterTimeout={300}
-            transitionLeaveTimeout={300}>
+            transitionEnterTimeout={600}
+            transitionLeaveTimeout={600}>
           </CSSTransitionGroup>
         </div>
       );

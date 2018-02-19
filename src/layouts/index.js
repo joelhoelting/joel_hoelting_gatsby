@@ -7,10 +7,13 @@ import {StyleRoot} from 'radium';
 // Syntax Highlighting
 require('prismjs/themes/prism-okaidia.css');
 
+// Local Fonts
+import './Fonts.scss';
+
 const TemplateWrapper = ({ children }) => (
   <StyleRoot>
     <Helmet
-      title="Joel Hoelting"
+      title="Joel Hölting"
       meta={[
         { name: 'description', content: 'Full Stack Web Developer' },
       ]}

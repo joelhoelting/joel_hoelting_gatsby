@@ -5,13 +5,14 @@
     "gatsby-link": "^1.6.32",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-sass": "^1.0.15",
+    "gatsby-plugin-typography": "^1.7.14",
     "gatsby-remark-images": "^1.5.36",
     "gatsby-remark-prismjs": "^1.2.11",
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-remark": "^1.7.26",
     "radium": "^0.22.0",
     "react-addons-css-transition-group": "^15.6.2",
-    "save": "^2.3.2"
+    "typography-theme-lawton": "^0.15.10"
   },
   "keywords": [
     "gatsby"
