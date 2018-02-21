@@ -12,13 +12,13 @@ const NavButton = (props) => {
       );
     } else {
       return (
-        'menu'
+        'navigation'
       );
     }
   }
 
   return (
-    <div id="navButton" onClick={props.toggleNav} className={props.navActive ? 'active' : ''}>
+    <div id="navButton" onClick={props.toggleNav} className={props.navActive ? 'active' : 'inactive'}>
        {renderNavMenu()}
     </div>
   );
