@@ -18,7 +18,7 @@ const NavButton = (props) => {
   }
 
   return (
-    <div onClick={props.toggleNav} className={props.navActive ? 'navMenu' : 'navButton'}>
+    <div id="navButton" onClick={props.toggleNav} className={props.navActive ? 'active' : ''}>
        {renderNavMenu()}
     </div>
   );

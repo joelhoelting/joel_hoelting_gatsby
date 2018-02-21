@@ -4,7 +4,6 @@ import Link from 'gatsby-link';
 import './NavMenu.scss';
 
 const NavMenu = (props) => {
-  debugger
   return (
     <div>
       <ul>
