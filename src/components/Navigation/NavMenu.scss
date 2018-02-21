@@ -1,0 +1,31 @@
+.navMenu {
+  height: 100%;
+  width: 100%;
+  left: 0%;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  font-family: 'Code Bold';
+  border:none;
+  background:none;
+  color: white;
+  text-align: Center;
+  font-size: 1.6em;
+  background-color: #24255d;
+  position: fixed;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 0;
+  transition: all .2s;
+  div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ul {
+      list-style-type: none;
+    }
+  }
+}
