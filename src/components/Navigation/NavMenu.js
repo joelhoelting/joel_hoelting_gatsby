@@ -1,11 +1,9 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-import './NavMenu.scss';
-
 const NavMenu = (props) => {
   return (
-    <div>
+    <div id="navMenu">
       <ul>
         <li className="link"><Link onClick={props.toggleNav} to="/">Home</Link></li>
         <li className="link"><Link onClick={props.toggleNav} to="/blog">Blog</Link></li>

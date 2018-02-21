@@ -3,7 +3,7 @@ import Logo from '../components/Logo';
 
 var styles = {
   base: {
-    height: '90vh',
+    height: '85vh',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',

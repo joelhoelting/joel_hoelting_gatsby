@@ -23,7 +23,10 @@ var styles = {
     fontSize: '3rem',
     color: '#24255d',
     margin: '20px 0',
-    textAlign: 'center'
+    textAlign: 'center',
+    '@media (max-width: 700px)': {
+      fontSize: '2rem',
+    },
   }
 };
 
@@ -67,7 +70,7 @@ var animations = {
     opacity: 0,
     animation: 'x 1s ease 2s forwards',
     animationName: fadeSubtitle,
-    transform: 'translateY(20%)',
+    transform: 'translateY(20%)'
   }
 };
 

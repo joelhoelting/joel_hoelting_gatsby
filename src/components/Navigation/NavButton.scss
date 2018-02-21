@@ -14,15 +14,33 @@
   cursor: pointer;
   border-radius: 0 0 20px 20px;
   &.inactive {
-    &:hover {
-      width: 225px;
-      height: 40px;
-      padding-top: 5px;
+    @media (min-width: 700px) {
+      &:hover {
+        width: 225px;
+        height: 40px;
+        padding-top: 5px;
+      }
     }
   }
   &.active {
     width: 100vw; /* 100% of the viewport width */
     height: 100vh;
     border-radius: 0;
+  }
+
+  div#navMenu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ul {
+      list-style-type: none;
+      li {
+        font-size: 4rem;
+        a {
+          color: #C60000;
+        }
+      }
+    }
   }
 }

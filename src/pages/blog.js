@@ -5,7 +5,7 @@ export default function Index({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
 
   return (
-    <div style={{marginTop: '10vh'}} className="blog-posts">
+    <div className="blog-posts">
       {posts
         .map(({ node: post }) => {
           return (

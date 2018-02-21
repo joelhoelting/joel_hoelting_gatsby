@@ -21,7 +21,7 @@ const TemplateWrapper = ({ children }) => (
     <Navigation />
     <div
       style={{
-        margin: '0 auto',
+        margin: '5vh auto',
         maxWidth: '980px',
         width: '95%'
       }}
