@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../components/Logo';
+import Title from '../components/Title';
 import Footer from '../components/Footer';
 
 var styles = {
@@ -16,7 +16,7 @@ class IndexPage extends React.Component {
   render() {
     return (
       <div style={styles.base}>
-        <Logo />
+        <Title />
         <Footer />
       </div>
     );

@@ -8,7 +8,7 @@ import linkedin_png from './icons/linkedin.png';
 import stackoverflow_png from './icons/stackoverflow.png';
 
 const styles = {
-  position: 'fixed',
+  position: 'absolute',
   bottom: 0,
   height: '100px',
   link: {

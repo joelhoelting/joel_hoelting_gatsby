@@ -1,5 +1,5 @@
 ---
-path: '/2018-01-09-comparing-scope-javascript-ruby-python'
+path: '/comparing-scope-javascript-ruby-python'
 date: '2018-01-09'
 title: 'Comparing Scope in Javascript, Ruby and Python'
 published: true

@@ -1,5 +1,5 @@
 ---
-path: '/2016-10-27-sinatra-final-project'
+path: '/sinatra-final-project'
 date: '2016-10-27'
 title: "Building a Sinatra App w/ TDD"
 published: true

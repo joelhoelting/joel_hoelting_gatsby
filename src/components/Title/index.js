@@ -83,7 +83,7 @@ const animations = {
   }
 };
 
-const Logo = () => {
+const Title = () => {
   return (
     <div style={styles.flexDiv}>
       <svg id="desktop-logo" style={[styles.desktop, styles]} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1356.8 181.5">
@@ -121,4 +121,4 @@ const Logo = () => {
   );
 };
 
-export default Radium(Logo);
+export default Radium(Title);

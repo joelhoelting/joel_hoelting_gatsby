@@ -14,6 +14,7 @@ export default function Index({ data }) {
                 <Link key={post.id} to={post.frontmatter.path}>{post.frontmatter.title}</Link>
               </h1>
               <h2>{post.frontmatter.date}</h2>
+              <h6>{post.excerpt}</h6>
             </div>
           );
         })}
@@ -31,6 +32,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          excerpt(pruneLength: 280)
           frontmatter {
             published
             title
