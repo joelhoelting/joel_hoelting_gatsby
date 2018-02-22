@@ -1,7 +1,8 @@
 import React from 'react';
-import './NavButton.scss';
 
+import './Navigation.scss';
 import NavMenu from './NavMenu';
+
 
 const NavButton = (props) => {
 

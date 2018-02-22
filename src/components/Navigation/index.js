@@ -23,7 +23,7 @@ class Navigation extends Component {
   render() {
     return (
       <div>
-        <NavButton toggleNav={this.toggleNav.bind(this)} navActive={this.state.navActive} />
+        <NavButton transitionName="animate" toggleNav={this.toggleNav.bind(this)} navActive={this.state.navActive} />
       </div>
     );
   }
