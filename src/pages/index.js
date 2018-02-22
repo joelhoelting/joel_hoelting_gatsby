@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from '../components/Logo';
+import Footer from '../components/Footer';
 
 var styles = {
   base: {
@@ -16,6 +17,7 @@ class IndexPage extends React.Component {
     return (
       <div style={styles.base}>
         <Logo />
+        <Footer />
       </div>
     );
   }

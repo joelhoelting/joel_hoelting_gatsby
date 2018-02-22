@@ -5,10 +5,10 @@ const NavMenu = (props) => {
   return (
     <div id="navMenu">
       <ul>
-        <li className="link"><Link onClick={props.toggleNav} to="/">Home</Link></li>
-        <li className="link"><Link onClick={props.toggleNav} to="/blog">Blog</Link></li>
-        <li className="link"><Link onClick={props.toggleNav} to="/portfolio">Portfolio</Link></li>
-        <li className="link"><Link onClick={props.toggleNav} to="/resume">Resume</Link></li>
+        <li className="link"><Link onClick={props.toggleNav} to="/">HOME</Link></li>
+        <li className="link"><Link onClick={props.toggleNav} to="/blog">BLOG</Link></li>
+        <li className="link"><Link onClick={props.toggleNav} to="/portfolio">PORTFOLIO</Link></li>
+        <li className="link"><Link onClick={props.toggleNav} to="/resume">RESUME</Link></li>
       </ul>
     </div>
   );
