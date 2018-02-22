@@ -12,13 +12,16 @@ const styles = {
   bottom: 0,
   height: '100px',
   link: {
-    opacity: '0',
-    margin: '0 20px',
-    '@media (max-width: 700px)': {
-      margin: '0 10px'
+    margin: '0 10px',
+    '@media (min-width: 700px)': {
+      margin: '0 20px',
     }
   },
   icon: {
+    ':hover': {
+      position: 'relative',
+      bottom: '5px',
+    },
     '@media (max-width: 700px)': {
       height: '40px',
       width: '40px'
@@ -39,7 +42,7 @@ const fadeIcons = Radium.keyframes({
 });
 
 const animations = {
-  icons: {
+  links: {
     opacity: 0,
     animation: 'x 1s ease 2s forwards',
     animationName: fadeIcons,
@@ -70,8 +73,8 @@ const icons = [
 ];
 
 const mapIcons = icons.map((icon, index) => (
-  <a style={[styles.link, animations.icons]} key={index} href={icon.url} target="_blank">
-    <img style={styles.icon} src={icon.data} alt={icon.string} />
+  <a style={[styles.link, animations.links]} key={index} href={icon.url} target="_blank">
+    <img style={styles.icon} key={index} src={icon.data} alt={icon.string} />
   </a>
 ));
 
