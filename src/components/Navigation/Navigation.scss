@@ -38,6 +38,7 @@
       li {
         font-size: 4rem;
         opacity: 0;
+        text-shadow: 2px 2px #000;
         &:nth-child(1) {
           animation: opacity 500ms linear forwards;
         }

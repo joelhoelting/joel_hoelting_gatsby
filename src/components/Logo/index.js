@@ -1,6 +1,8 @@
 import React from 'react';
 import Radium from 'radium';
 
+import IconContainer from './IconContainer';
+
 // Styles
 
 var styles = {
@@ -108,6 +110,7 @@ const Logo = () => {
       <h1 style={[styles.subtitle, animations.subtitle]}>
         Full Stack Web Developer
       </h1>
+      <IconContainer />
     </div>
   );
 };
