@@ -8,7 +8,7 @@ const NavMenu = (props) => {
         <li className="link"><Link onClick={props.toggleNav} to="/">HOME</Link></li>
         <li className="link"><Link onClick={props.toggleNav} to="/blog">BLOG</Link></li>
         <li className="link"><Link onClick={props.toggleNav} to="/portfolio">PORTFOLIO</Link></li>
-        <li className="link"><Link onClick={props.toggleNav} to="/about">ABOUT</Link></li>
+        <li className="link"><Link onClick={props.toggleNav} to="/about">ABOUT ME</Link></li>
       </ul>
     </div>
   );

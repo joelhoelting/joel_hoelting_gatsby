@@ -10,21 +10,24 @@ import stackoverflow_png from './icons/stackoverflow.png';
 const styles = {
   position: 'absolute',
   bottom: 0,
+  left: 0,
   height: '100px',
-  link: {
+  width: '100%',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  icon: {
+    height: '40px',
+    width: '40px',
     margin: '0 10px',
     '@media (min-width: 700px)': {
+      height: '50px',
+      width: '50px',
       margin: '0 20px',
-    }
-  },
-  icon: {
-    ':hover': {
-      position: 'relative',
-      bottom: '5px',
-    },
-    '@media (max-width: 700px)': {
-      height: '40px',
-      width: '40px'
+      ':hover': {
+        position: 'relative',
+        bottom: '5px',
+      },
     }
   }
 };
@@ -73,7 +76,7 @@ const icons = [
 ];
 
 const mapIcons = icons.map((icon, index) => (
-  <a style={[styles.link, animations.links]} key={index} href={icon.url} target="_blank">
+  <a style={animations.links} key={index} href={icon.url} target="_blank">
     <img style={styles.icon} key={index} src={icon.data} alt={icon.string} />
   </a>
 ));

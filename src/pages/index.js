@@ -15,9 +15,11 @@ class IndexPage extends React.Component {
 
   render() {
     return (
-      <div style={styles.base}>
-        <Title />
-        <Footer />
+      <div>
+        <div style={styles.base}>
+          <Title />
+        </div>
+        <Footer/>
       </div>
     );
   }

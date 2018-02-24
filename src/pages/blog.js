@@ -37,7 +37,7 @@ export const pageQuery = graphql`
             published
             title
             path
-            date
+            date(formatString: "MMMM DD, YYYY")
             description
           }
         }

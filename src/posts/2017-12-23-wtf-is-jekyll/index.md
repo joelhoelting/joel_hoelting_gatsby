@@ -22,7 +22,6 @@ Initialize a new local Git repository by typing in `git init` inside your new Je
 Breakdown of File Tree:
 
 ![](jekyll_tree.png)
-![](elmo.png)
 
 **config.yml:** This file is only meant to be set up once and contains settings for your blog. Here you can  enter your site's title that appears at the top of the browser window. You can also specify what files get included when you serve the site. Every time you edit this file you will need to re-serve Jekyll by running `jekyll serve` in order to see the changes.
 
