@@ -9,8 +9,6 @@ class Navigation extends Component {
     this.state = {
       navActive: false
     };
-
-    this.toggleNav = this.toggleNav.bind(this);
   }
 
   toggleNav() {

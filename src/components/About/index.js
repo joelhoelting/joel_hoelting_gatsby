@@ -20,7 +20,7 @@ const styles = {
 };
 
 const About = () => (
- <div style={{maxWidth: '700px', margin: '0 auto'}}>
+ <div style={{maxWidth: '650px', margin: '0 auto'}}>
   <img style={styles.image} src={profile_pic} />
   <h1 style={styles.header}>My Story</h1>
   <Markdown source={about} />

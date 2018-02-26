@@ -4,7 +4,7 @@ import Link from 'gatsby-link';
 const NavMenu = (props) => {
   return (
     <div id="navMenu">
-      <ul>
+      <ul style={{marginLeft: 0, marginBottom: '50px'}}>
         <li className="link"><Link onClick={props.toggleNav} to="/">HOME</Link></li>
         <li className="link"><Link onClick={props.toggleNav} to="/blog">BLOG</Link></li>
         <li className="link"><Link onClick={props.toggleNav} to="/portfolio">PORTFOLIO</Link></li>

@@ -16,6 +16,7 @@ const styles = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  zIndex: 999,
   icon: {
     height: '40px',
     width: '40px',
