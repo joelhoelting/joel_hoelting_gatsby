@@ -24,11 +24,7 @@ const styles = {
     '@media (min-width: 700px)': {
       height: '50px',
       width: '50px',
-      margin: '0 20px',
-      ':hover': {
-        position: 'relative',
-        bottom: '5px',
-      },
+      margin: '0 20px'
     }
   }
 };
