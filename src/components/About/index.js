@@ -1,4 +1,5 @@
 import React from 'react';
+import Radium from 'radium';
 import Markdown from 'react-markdown';
 
 import Footer from '../../components/Footer';
@@ -7,11 +8,18 @@ import profile_pic from './profile.jpg';
 import about from './about';
 
 const styles = {
+  container: {
+    maxWidth: '650px',
+    margin: '0 auto'
+  },
   image: {
     borderRadius: '100%',
     display: 'block',
     margin: '0 auto',
-    border: '4px solid #24255d'
+    border: '4px solid #24255d',
+    '@media (max-width: 700px)': {
+      width: '50%'
+    },
   },
   header: {
     textAlign: 'center',
@@ -19,13 +27,15 @@ const styles = {
   }
 };
 
+const { container, image, header } = styles;
+
 const About = () => (
- <div style={{maxWidth: '650px', margin: '0 auto'}}>
-  <img style={styles.image} src={profile_pic} />
-  <h1 style={styles.header}>My Story</h1>
+ <div style={container}>
+  <img style={image} src={profile_pic} />
+  <h1 style={header}>About Me</h1>
   <Markdown source={about} />
   <Footer />
  </div>
 );
 
-export default About;
+export default Radium(About);

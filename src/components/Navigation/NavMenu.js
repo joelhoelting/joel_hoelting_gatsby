@@ -38,7 +38,7 @@ const NavMenu = (props) => {
       }
     ];
 
-    const renderedLinks = links.map((link, i) => <li className='link' style={listItemAnimations[i]}><Link key={i} onClick={props.toggleNav} to={link.path}>{link.title}</Link></li>);
+    const renderedLinks = links.map((link, i) => <li key={i} style={listItemAnimations[i]}><Link  onClick={props.toggleNav} to={link.path}>{link.title}</Link></li>);
     return renderedLinks;
   }
 
