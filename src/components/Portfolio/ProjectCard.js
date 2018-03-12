@@ -4,20 +4,21 @@ import Radium from 'radium';
 const ProjectCard = (props) => {
   const styles = {
     base: {
-      padding: '20px',
-      borderRadius: '2px',
-      boxShadow: '2px 6px 5px rgba(0, 0, 0, 0.5)',
+      padding: '1em',
+      borderRadius: '.1em',
+      boxShadow: '.125em .125em .3125em rgba(0, 0, 0, 0.5)',
       textDecoration: 'none',
       transform: 'scale(.95)',
       transition: 'all .2s ease-in-out',
       '@media (min-width: 700px)': {
         ':hover': {
           transform: 'scale(1.0)',
-          boxShadow: '2px 2px 10px rgba(0, 0, 0, 0.5)',
+          boxShadow: '.125em .125em .625em rgba(0, 0, 0, 0.5)',
         }
       },
       '@media (max-width: 700px)': {
         transform: 'scale(1)',
+        boxShadow: '.125em .375em .3125em rgba(0, 0, 0, 0.5)',
       }
     },
     title: {
@@ -25,7 +26,7 @@ const ProjectCard = (props) => {
       textTransform: 'uppercase',
     },
     image: {
-      borderRadius: '5px'
+      borderRadius: '.2em'
     }
   };
 

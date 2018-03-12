@@ -26,7 +26,7 @@ class NavButton extends Component {
         top: 0,
         /* makes it horizontally centered */
         transform: 'translateX(-50%)',
-        transition: 'all 300ms linear',
+        transition: 'all 100ms linear',
         width: '12em',
         zIndex: 1,
       },
