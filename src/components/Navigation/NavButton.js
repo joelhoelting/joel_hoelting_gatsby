@@ -29,7 +29,7 @@ const NavButton = (props) => {
           width: '15em',
           height: '2.5em',
           paddingTop: '5px',
-          borderRadius: '0 0 .4em .4em',
+          borderRadius: '0 0 .5em .5em',
         }
       },
     },
