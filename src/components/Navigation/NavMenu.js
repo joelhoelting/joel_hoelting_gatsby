@@ -4,38 +4,38 @@ import Link from 'gatsby-link';
 
 const NavMenu = (props) => {
 
-  var opacity = Radium.keyframes({
-    '0%': {opacity: 0},
-    '50%': {opacity: 0},
-    '100%': {opacity: 1},
-  });
-
-
-  const listItemAnimations = [
-    {
-      animation: 'x 500ms linear forwards',
-      animationName: opacity
-    },
-    {
-      animation: 'x 500ms 100ms linear forwards',
-      animationName: opacity
-    },
-    {
-      animation: 'x 500ms 200ms linear forwards',
-      animationName: opacity
-    },
-    {
-      animation: 'x 500ms 300ms linear forwards',
-      animationName: opacity
-    }
-  ];
-
   function createLinks() {
     const links = [
       { title: 'HOME', path: '/' },
       { title: 'BLOG', path: '/blog' },
       { title: 'PORTFOLIO', path: '/portfolio' },
       { title: 'ABOUT ME', path: '/about' },
+    ];
+
+    var opacity = Radium.keyframes({
+      '0%': {opacity: 0},
+      '50%': {opacity: 0},
+      '100%': {opacity: 1},
+    });
+
+
+    const listItemAnimations = [
+      {
+        animation: 'x 500ms linear forwards',
+        animationName: opacity
+      },
+      {
+        animation: 'x 500ms 100ms linear forwards',
+        animationName: opacity
+      },
+      {
+        animation: 'x 500ms 200ms linear forwards',
+        animationName: opacity
+      },
+      {
+        animation: 'x 500ms 300ms linear forwards',
+        animationName: opacity
+      }
     ];
 
     const renderedLinks = links.map((link, i) => <li className='link' style={listItemAnimations[i]}><Link key={i} onClick={props.toggleNav} to={link.path}>{link.title}</Link></li>);

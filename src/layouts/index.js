@@ -24,7 +24,7 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
       title="Joel Hölting"
       meta={[
-        { name: 'description', content: 'Passionate full stack web developer with over two years experience in Ruby, Javascript and Python.' },
+        { name: 'description', content: 'Passionate full stack web developer and coding instructor with over two years experience in Ruby, Javascript and Python.' },
       ]}
     />
     <Navigation />
