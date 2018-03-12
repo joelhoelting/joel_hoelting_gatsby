@@ -2,8 +2,6 @@ import React from 'react';
 import Radium from 'radium';
 import Markdown from 'react-markdown';
 
-import Footer from '../../components/Footer';
-
 import profile_pic from './profile.jpg';
 import about from './about';
 
@@ -34,7 +32,6 @@ const About = () => (
   <img style={image} src={profile_pic} />
   <h1 style={header}>About Me</h1>
   <Markdown source={about} />
-  <Footer />
  </div>
 );
 

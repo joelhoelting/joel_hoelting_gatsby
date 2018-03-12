@@ -4,9 +4,9 @@ import Radium from 'radium';
 const ProjectCard = (props) => {
   const styles = {
     base: {
-      padding: '10px',
+      padding: '20px',
       borderRadius: '2px',
-      boxShadow: '2px 6px 10px rgba(0, 0, 0, 0.5)',
+      boxShadow: '2px 6px 5px rgba(0, 0, 0, 0.5)',
       textDecoration: 'none',
       transform: 'scale(.95)',
       transition: 'all .2s ease-in-out',
@@ -31,7 +31,7 @@ const ProjectCard = (props) => {
 
   return (
     <a href={props.url} style={styles.base}>
-      <h2 style={styles.title}>{props.title}</h2>
+      <h3 style={styles.title}>{props.title}</h3>
       <a href={props.url} target="_blank"><img style={styles.image} src={props.image} /></a>
       <h4>{props.description}</h4>
       <h6>{props.tools.join(' | ')}</h6>

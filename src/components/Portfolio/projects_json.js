@@ -31,7 +31,7 @@ export const projects = [
     title: 'Freegan Forum',
     url: 'http://freeganforum.com',
     description: 'MVC/CRUD app with customised user authentication system',
-    tools: ['Sinatra', 'HTML', 'CSS', 'JavaScript'],
+    tools: ['Sinatra', 'Ruby', 'HTML', 'CSS', 'JavaScript'],
     image: freegan_forum
   },
   {
@@ -45,7 +45,7 @@ export const projects = [
     title: 'We Will Not Be Silent',
     url: 'https://wewillnotbesilent.net',
     description: 'e-Commerce site built with Shopify',
-    tools: ['Shopify', 'Slate', 'HTML', 'CSS', 'JavaScript'],
+    tools: ['Shopify', 'Liquid', 'HTML', 'CSS', 'JavaScript'],
     image: we_will_not_be_silent
   },
 ];
