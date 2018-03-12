@@ -1,24 +1,40 @@
 import React from 'react';
+import Radium from 'radium';
 
-import Project from '../components/Portfolio/Project';
-import { projects } from '../components/Portfolio/projects';
+import ProjectCard from '../components/Portfolio/ProjectCard';
+import { projects } from '../components/Portfolio/projects_json';
 
 const Portfolio = () => {
-  function renderProjects() {
+  const styles = {
+    base: {
+      display: 'grid',
+      gridTemplateColumns: '33% 33% 33%',
+      gridAutoRows: 'auto',
+      gridGap: '.5em',
+      paddingTop: '2em',
+      '@media (max-width: 1050px)': {
+        gridTemplateColumns: '50% 50%'
+      },
+      '@media (max-width: 700px)': {
+        gridTemplateColumns: '100%'
+      }
+    }
+  };
 
+  function renderProjects() {
     const listProjects = projects.map(function(project) {
       const {url, image, title, description, tools} = project;
-      return <Project url={url} image={image} title={title} description={description} tools={tools} />;
+      return <ProjectCard url={url} image={image} title={title} description={description} tools={tools} />;
     });
     return listProjects;
   }
 
   return (
-    <div>
+    <div style={styles.base}>
       {renderProjects()}
     </div>
   );
 
 };
 
-export default Portfolio;
+export default Radium(Portfolio);
