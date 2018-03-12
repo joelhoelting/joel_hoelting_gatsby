@@ -12,7 +12,8 @@ const ProjectCard = (props) => {
       transition: 'all .2s ease-in-out',
       '@media (min-width: 700px)': {
         ':hover': {
-          transform: 'scale(1.0)'
+          transform: 'scale(1.0)',
+          boxShadow: '2px 2px 10px rgba(0, 0, 0, 0.5)',
         }
       },
       '@media (max-width: 700px)': {

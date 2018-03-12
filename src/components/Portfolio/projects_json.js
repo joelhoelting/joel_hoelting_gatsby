@@ -17,35 +17,35 @@ export const projects = [
     title: 'Who Said It?',
     url: 'https://whosaidit.co',
     description: 'RESTful quote-picking game built in Rails and CommonJS',
-    tools: ['Ruby on Rails', 'jQuery', 'CSS3'],
+    tools: ['Ruby on Rails', 'JavaScript'],
     image: who_said_it
   },
   {
     title: 'PJ Masks Live',
     url: 'http://pjmaskslive.com',
     description: 'Ticketing website for theatrical version of popular Disney kids tv show',
-    tools: ['Middleman', 'HTML5', 'CSS3', 'Canvas'],
+    tools: ['Middleman', 'HTML5', 'CSS3', 'JavaScript'],
     image: pj_masks_live
   },
   {
     title: 'Freegan Forum',
     url: 'http://freeganforum.com',
     description: 'MVC/CRUD app with customised user authentication system',
-    tools: ['Sinatra', 'HTML', 'CSS', 'Javascript'],
+    tools: ['Sinatra', 'HTML', 'CSS', 'JavaScript'],
     image: freegan_forum
   },
   {
     title: 'Bronwyn Roe',
     url: 'https://bronwynroe.com',
     description: 'Portfolio website for NYC-based painter, Bronwyn Roe',
-    tools: ['Jekyll', 'HTML', 'CSS', 'Javascript'],
+    tools: ['Jekyll', 'HTML', 'CSS', 'JavaScript'],
     image: bronwyn_roe
   },
   {
     title: 'We Will Not Be Silent',
     url: 'https://wewillnotbesilent.net',
     description: 'e-Commerce site built with Shopify',
-    tools: ['Shopify', 'Slate', 'HTML', 'CSS', 'Javascript'],
+    tools: ['Shopify', 'Slate', 'HTML', 'CSS', 'JavaScript'],
     image: we_will_not_be_silent
   },
 ];

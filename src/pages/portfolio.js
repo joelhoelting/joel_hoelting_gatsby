@@ -16,7 +16,8 @@ const Portfolio = () => {
         gridTemplateColumns: '50% 50%'
       },
       '@media (max-width: 700px)': {
-        gridTemplateColumns: '100%'
+        gridTemplateColumns: '100%',
+        gridGap: '3em',
       }
     }
   };
