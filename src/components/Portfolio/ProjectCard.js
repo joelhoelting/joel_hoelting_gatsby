@@ -10,6 +10,7 @@ const ProjectCard = (props) => {
       textDecoration: 'none',
       transform: 'scale(.95)',
       transition: 'all .2s ease-in-out',
+      cursor: 'pointer',
       '@media (min-width: 700px)': {
         ':hover': {
           transform: 'scale(1.0)',
@@ -31,12 +32,12 @@ const ProjectCard = (props) => {
   };
 
   return (
-    <a href={props.url} style={styles.base}>
+    <div style={styles.base} onClick={() =>  window.open(props.url)}>
       <h3 style={styles.title}>{props.title}</h3>
-      <a href={props.url} target="_blank"><img style={styles.image} src={props.image} /></a>
+      <img style={styles.image} src={props.image} />
       <h4>{props.description}</h4>
       <h6>{props.tools.join(' | ')}</h6>
-    </a>
+    </div>
   );
 };
 
