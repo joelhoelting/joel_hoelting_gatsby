@@ -2,6 +2,8 @@ import React from 'react';
 import Radium, {Style} from 'radium';
 import Link from 'gatsby-link';
 
+import styles from './NavMenu.module.scss';
+
 const NavMenu = (props) => {
 
   function createLinks() {
@@ -38,7 +40,7 @@ const NavMenu = (props) => {
       }
     ];
 
-    const renderedLinks = links.map((link, i) => <li key={i} style={listItemAnimations[i]}><Link  onClick={props.toggleNav} to={link.path}>{link.title}</Link></li>);
+    const renderedLinks = links.map((link, i) => <li key={i} style={listItemAnimations[i]}><Link className={styles.link} onClick={props.toggleNav} to={link.path}>{link.title}</Link></li>);
     return renderedLinks;
   }
 
@@ -47,22 +49,20 @@ const NavMenu = (props) => {
       <Style
         scopeSelector=".navMenu"
         rules={{
-          height: '100%',
+          height: '90%',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           ul: {
             listStyleType: 'none',
             marginLeft: 0,
-            marginBottom: '50px',
           },
           li: {
             fontSize: '4rem',
             opacity: 0,
-            textShadow: '2px 2px #000'
-          },
-          a: {
-            color: '#C60000'
+            textShadow: '2px 2px #000',
+            margin: 0,
+            padding: 0
           }
         }}
       />

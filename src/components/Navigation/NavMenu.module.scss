@@ -1,0 +1,28 @@
+$red: #c60000;
+
+.link {
+  color: $red;
+  position: relative;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+  @media (min-width: 700px) {
+    &::before {
+      background-color: $red;
+      bottom: 0;
+      content: '';
+      height: 5px;
+      left: 0;
+      position: absolute;
+      transform: scaleX(0);
+      transition: transform .2s ease-in-out;
+      visibility: hidden;
+      width: 100%;
+    }
+    &:hover::before {
+      transform: scaleX(1);
+      visibility: visible;
+    }
+  }
+}

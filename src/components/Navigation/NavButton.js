@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Radium from 'radium';
 import NavMenu from './NavMenu';
 
 class NavButton extends Component {
 
-  handleClick() {
+  handleClick = () => {
     // Toggle navActive State
     this.props.toggleNav();
     // Remove Hover State in Radium (BugFix)
@@ -53,7 +53,7 @@ class NavButton extends Component {
     return (
       <div
         style={[base, this.props.navActive ? active : inactive]}
-        onClick={() => this.handleClick()}>
+        onClick={this.handleClick}>
         {this.props.navActive ? <NavMenu toggleNav={toggleNav}/> : 'navigation'}
       </div>
     );

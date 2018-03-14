@@ -11,7 +11,7 @@ class Navigation extends Component {
     };
   }
 
-  toggleNav() {
+  toggleNav = () => {
     const state = !this.state.navActive;
     this.setState({
       navActive: state
@@ -21,7 +21,7 @@ class Navigation extends Component {
   render() {
     return (
       <div>
-        <NavButton toggleNav={() => this.toggleNav()} navActive={this.state.navActive} />
+        <NavButton toggleNav={this.toggleNav} navActive={this.state.navActive} />
       </div>
     );
   }
