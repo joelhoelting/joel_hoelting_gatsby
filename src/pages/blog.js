@@ -1,21 +1,24 @@
 import React from 'react';
-import Link from 'gatsby-link';
+
+import PostCard from '../components/Post/PostCard';
 
 export default function Index({ data }) {
+
   const { edges: posts } = data.allMarkdownRemark;
 
+  const styles = {
+    container: {
+      maxWidth: '700px',
+      margin: '0 auto 2em'
+    }
+  };
+
   return (
-    <div className="blog-posts">
+    <div style={styles.container}>
       {posts
         .map(({ node: post }) => {
           return (
-            <div className="blog-post-preview" key={post.id}>
-              <h1>
-                <Link key={post.id} to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-              </h1>
-              <h2>{post.frontmatter.date}</h2>
-              <h6>{post.excerpt}</h6>
-            </div>
+            <PostCard post={post}/>
           );
         })}
     </div>

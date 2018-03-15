@@ -15,35 +15,37 @@ class NavButton extends Component {
     const styles = {
       base: {
         background: '#24255d',
-        borderRadius: '0 0 1em 1em',
+        borderBottomLeftRadius: '5em',
+        borderBottomRightRadius: '5em',
         cursor: 'pointer',
         color: '#fff',
         fontFamily: 'Code Bold',
-        height: '1.5em',
+        height: '4em',
+        width: '8em',
         left: '50%',
+        paddingTop: '.5em',
         position: 'fixed',
         textAlign: 'center',
         top: 0,
         /* makes it horizontally centered */
         transform: 'translateX(-50%)',
         transition: 'all 100ms linear',
-        width: '12em',
         zIndex: 1,
       },
       inactive: {
+        borderRadius: '0 0 5em 5em',
         '@media (min-width: 700px)': {
           ':hover': {
-            width: '15em',
-            height: '2.5em',
-            paddingTop: '5px',
-            borderRadius: '0 0 .5em .5em',
+            width: '10em',
+            height: '5em',
+            paddingTop: '1em',
+            borderRadius: '0 0 6em 6em'
           }
         },
       },
       active: {
         width: '100vw',
-        height: '100vh',
-        borderRadius: 0
+        height: '100vh'
       }
     };
 

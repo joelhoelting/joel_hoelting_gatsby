@@ -16,7 +16,7 @@ const styles = {
     margin: '0 auto',
     border: '4px solid #24255d',
     '@media (max-width: 700px)': {
-      width: '50%'
+      width: '40%'
     },
   },
   header: {

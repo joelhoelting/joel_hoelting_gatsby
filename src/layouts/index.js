@@ -12,7 +12,8 @@ import './Fonts.scss';
 
 const styles = {
   container: {
-    margin: '5vh auto',
+    margin: '0 auto',
+    paddingTop: '5em',
     maxWidth: '980px',
     width: '95%'
   }
@@ -24,7 +25,7 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
       title="Joel Hölting"
       meta={[
-        { name: 'description', content: 'Passionate full stack web developer and coding instructor with over two years experience in Ruby, Javascript and Python.' },
+        { name: 'description', content: 'Passionate full stack web developer and coding instructor with over two years of experience in Ruby, Javascript, Python and PHP.' },
       ]}
     />
     <Navigation />

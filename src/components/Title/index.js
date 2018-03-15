@@ -6,7 +6,10 @@ import Radium from 'radium';
 const styles = {
   strokeWidth: '3',
   flexDiv: {
-    'flex': '1 0 auto'
+    flex: '1 0 auto',
+    '@media (max-width: 600px)': {
+      maxWidth: '80%'
+    }
   },
   desktop: {
     '@media (max-width: 600px)': {
@@ -25,7 +28,7 @@ const styles = {
     margin: '20px 0',
     textAlign: 'center',
     '@media (max-width: 700px)': {
-      fontSize: '2rem',
+      fontSize: '1.6rem',
     },
   }
 };

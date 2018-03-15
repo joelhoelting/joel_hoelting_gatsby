@@ -18,8 +18,7 @@ const ProjectCard = (props) => {
         }
       },
       '@media (max-width: 700px)': {
-        transform: 'scale(1)',
-        boxShadow: '.125em .375em .3125em rgba(0, 0, 0, 0.5)',
+        transform: 'scale(1)'
       }
     },
     title: {
