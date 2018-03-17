@@ -14,6 +14,7 @@
     "radium": "^0.22.0",
     "react-addons-css-transition-group": "^15.6.2",
     "react-markdown": "^3.2.1",
+    "react-pdf": "^2.5.3",
     "typography-theme-lawton": "^0.15.10"
   },
   "keywords": [
