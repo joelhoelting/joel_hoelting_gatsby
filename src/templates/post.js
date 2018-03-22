@@ -1,6 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
+import Bio from '../components/Bio';
+
 export default function Template({data}) {
 	const { markdownRemark: post } = data;
 	// data.markdownRemark holds our post data
@@ -10,6 +12,7 @@ export default function Template({data}) {
 			<h1 style={{textAlign: 'center'}}>{post.frontmatter.title}</h1>
 			<h4 style={{textAlign: 'center', marginBottom: '3em'}}>{post.frontmatter.date}</h4>
 			<div dangerouslySetInnerHTML={{__html: post.html}} />
+      <Bio />
 		</div>
 	)
 }

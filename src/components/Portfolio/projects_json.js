@@ -18,6 +18,7 @@ export const projects = [
     url: 'https://whosaidit.co',
     description: 'RESTful quote-picking game built in Rails and CommonJS',
     tools: ['Ruby on Rails', 'JavaScript'],
+    testing: ['Rspec'],
     image: who_said_it
   },
   {
@@ -32,6 +33,7 @@ export const projects = [
     url: 'http://freeganforum.com',
     description: 'MVC/CRUD app with customised user authentication system',
     tools: ['Sinatra', 'Ruby', 'HTML', 'CSS', 'JavaScript'],
+    testing: ['Rspec', 'Capybara'],
     image: freegan_forum
   },
   {

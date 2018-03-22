@@ -23,9 +23,8 @@ const Portfolio = () => {
   };
 
   function renderProjects() {
-    const listProjects = projects.map(function(project) {
-      const {url, image, title, description, tools} = project;
-      return <ProjectCard key={title} url={url} image={image} title={title} description={description} tools={tools} />;
+    const listProjects = projects.map(function(project, i) {
+      return <ProjectCard key={i} project={project} />;
     });
     return listProjects;
   }

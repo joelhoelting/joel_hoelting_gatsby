@@ -30,12 +30,15 @@ const ProjectCard = (props) => {
     }
   };
 
+  const { url, title, image, description, tools, testing } = props.project;
+
   return (
-    <div style={styles.base} onClick={() =>  window.open(props.url)}>
-      <h3 style={styles.title}>{props.title}</h3>
-      <img style={styles.image} src={props.image} />
-      <h4>{props.description}</h4>
-      <h6>{props.tools.join(' | ')}</h6>
+    <div style={styles.base} onClick={() =>  window.open(url)}>
+      <h3 style={styles.title}>{title}</h3>
+      <img style={styles.image} src={image} />
+      <h4>{description}</h4>
+      <h6 style={{margin: 0}}>{tools.join(', ')}</h6>
+      <h6>{ testing ? 'TDD: ' + testing.join(', ') : '' }</h6>
     </div>
   );
 };

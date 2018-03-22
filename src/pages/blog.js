@@ -16,9 +16,9 @@ export default function Index({ data }) {
   return (
     <div style={styles.container}>
       {posts
-        .map(({ node: post }) => {
+        .map(({ node: post }, i) => {
           return (
-            <PostCard post={post}/>
+            <PostCard key={i} post={post}/>
           );
         })}
     </div>

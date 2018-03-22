@@ -1,6 +1,6 @@
 ---
 path: '/my-life-in-web-developer-purgatory'
-date: '2018-03-23'
+date: '2018-03-22'
 title: 'My Life in Web Developer Purgatory'
 published: true
 ---

@@ -3,12 +3,35 @@ import Radium from 'radium';
 import NavMenu from './NavMenu';
 
 class NavButton extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      hideButton: false,
+      scrollPosition: 0
+    };
+    this
+  }
 
   handleClick = () => {
     // Toggle navActive State
     this.props.toggleNav();
     // Remove Hover State in Radium (BugFix)
     this.setState({ _radiumStyleState: { 'componentKey': { ':hover': false }}});
+  }
+
+  componentDidMount() {
+    let originalThis = this;
+    window.addEventListener('scroll', this.checkScroll.bind(originalThis))
+  }
+
+  checkScroll() {
+    console.log(window.scrollY)
+    if (window.scrollY > this.state.scrollPosition) {
+      this.setState({hideButton: true, scrollPosition: window.scrollY})
+    } else {
+      this.setState({hideButton: false, scrollPosition: window.scrollY})
+    }
   }
 
   render() {
@@ -26,11 +49,16 @@ class NavButton extends Component {
         paddingTop: '.5em',
         position: 'fixed',
         textAlign: 'center',
-        top: 0,
         /* makes it horizontally centered */
         transform: 'translateX(-50%)',
         transition: 'all 100ms linear',
         zIndex: 1,
+      },
+      show: {
+        top: 0
+      },
+      hide: {
+        top: -75
       },
       inactive: {
         borderRadius: '0 0 5em 5em',
@@ -49,12 +77,12 @@ class NavButton extends Component {
       }
     };
 
-    const { base, active, inactive } = styles;
+    const { base, show, hide, active, inactive } = styles;
     const { toggleNav } = this.props;
 
     return (
       <div
-        style={[base, this.props.navActive ? active : inactive]}
+        style={[base, this.state.hideButton ? hide : show, this.props.navActive ? active : inactive]}
         onClick={this.handleClick}>
         {this.props.navActive ? <NavMenu toggleNav={toggleNav}/> : 'navigation'}
       </div>

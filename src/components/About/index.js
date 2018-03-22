@@ -2,7 +2,7 @@ import React from 'react';
 import Radium from 'radium';
 import Markdown from 'react-markdown';
 
-import profile_pic from './profile.jpg';
+import profilePic from '../../assets/profile.jpg';
 import about from './about';
 
 const styles = {
@@ -29,7 +29,7 @@ const { container, image, header } = styles;
 
 const About = () => (
  <div style={container}>
-  <img style={image} src={profile_pic} />
+  <img style={image} src={profilePic} />
   <h1 style={header}>About Me</h1>
   <Markdown source={about} />
  </div>
