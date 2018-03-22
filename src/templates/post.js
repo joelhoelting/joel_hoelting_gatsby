@@ -9,8 +9,11 @@ export default function Template({data}) {
 
 	return (
 		<div>
-			<h1 style={{textAlign: 'center'}}>{post.frontmatter.title}</h1>
-			<h4 style={{textAlign: 'center', marginBottom: '3em'}}>{post.frontmatter.date}</h4>
+      <div style={{margin: '3em 0', textAlign: 'center'}}>
+        <h1 style={{margin: '.5em'}}>{post.frontmatter.title}</h1>
+  			<h4>{post.frontmatter.date}</h4>
+      </div>
+      <hr style={{margin: '3em 0'}} />
 			<div dangerouslySetInnerHTML={{__html: post.html}} />
       <Bio />
 		</div>

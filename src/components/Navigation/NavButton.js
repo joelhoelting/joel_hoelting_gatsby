@@ -10,7 +10,7 @@ class NavButton extends Component {
       hideButton: false,
       scrollPosition: 0
     };
-    this
+
   }
 
   handleClick = () => {
@@ -26,7 +26,6 @@ class NavButton extends Component {
   }
 
   checkScroll() {
-    console.log(window.scrollY)
     if (window.scrollY > this.state.scrollPosition) {
       this.setState({hideButton: true, scrollPosition: window.scrollY})
     } else {
