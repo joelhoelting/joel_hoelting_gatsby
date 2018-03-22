@@ -7,8 +7,8 @@ export default function Template({data}) {
 
 	return (
 		<div>
-			<h1>{post.frontmatter.title}</h1>
-			<h2>{post.frontmatter.date}</h2>
+			<h1 style={{textAlign: 'center'}}>{post.frontmatter.title}</h1>
+			<h4 style={{textAlign: 'center', marginBottom: '3em'}}>{post.frontmatter.date}</h4>
 			<div dangerouslySetInnerHTML={{__html: post.html}} />
 		</div>
 	)
