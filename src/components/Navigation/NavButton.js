@@ -37,8 +37,7 @@ class NavButton extends Component {
     const styles = {
       base: {
         background: '#24255d',
-        borderBottomLeftRadius: '5em',
-        borderBottomRightRadius: '5em',
+        borderRadius: '0 0 5em 5em',
         cursor: 'pointer',
         color: '#fff',
         fontFamily: 'Code Bold',
@@ -66,13 +65,14 @@ class NavButton extends Component {
             width: '10em',
             height: '5em',
             paddingTop: '1em',
-            borderRadius: '0 0 6em 6em'
+            borderRadius: '0 0 5em 5em'
           }
         },
       },
       active: {
         width: '100vw',
-        height: '100vh'
+        height: '100vh',
+        borderRadius: 0
       }
     };
 
