@@ -20,7 +20,7 @@ class PostCard extends Component {
   render() {
     const styles = {
       post: {
-        margin: '1em auto',
+        margin: '.5em auto',
         boxShadow: '1px 1px 5px #000',
         padding: '2em',
         transition: 'transform 200ms ease, opacity 1s ease, right 500ms ease',
@@ -29,6 +29,7 @@ class PostCard extends Component {
         transform: 'scale(.95)',
         position: 'relative',
         '@media (min-width: 700px)': {
+          margin: '1em auto',
           ':hover': {
             transform: 'scale(1.0)',
           }
@@ -52,7 +53,7 @@ class PostCard extends Component {
 
     return (
       <div style={[post, this.state.visible ? visible : invisible]} key={this.props.post.id} onClick={() => navigateTo(this.props.post.frontmatter.path)}>
-        <Waypoint onEnter={this.handleEnter} />
+        <Waypoint onEnter={this.handleEnter} bottomOffset='100px' />
         <h1>
           <Link style={link} key={this.props.post.id} to={this.props.post.frontmatter.path}>{this.props.post.frontmatter.title}</Link>
         </h1>
