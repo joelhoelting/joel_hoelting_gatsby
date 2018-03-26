@@ -18,7 +18,9 @@ export default function Index({ data }) {
       {posts
         .map(({ node: post }, i) => {
           return (
-            <PostCard key={i} post={post}/>
+            <div>
+              <PostCard key={i} post={post}/>
+            </div>
           );
         })}
     </div>

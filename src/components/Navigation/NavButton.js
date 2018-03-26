@@ -26,7 +26,6 @@ class NavButton extends Component {
 
   checkScroll() {
     if (window.scrollY > this.state.scrollPosition + 50) {
-      console.log('success')
       this.setState({hideButton: true, scrollPosition: window.scrollY})
     } else if (window.scrollY < this.state.scrollPosition - 50) {
       this.setState({hideButton: false, scrollPosition: window.scrollY})
