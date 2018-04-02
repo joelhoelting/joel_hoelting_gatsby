@@ -49,7 +49,7 @@ const NavMenu = (props) => {
       <Style
         scopeSelector=".navMenu"
         rules={{
-          height: '90%',
+          height: '95%',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',

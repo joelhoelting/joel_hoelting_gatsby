@@ -1,7 +1,7 @@
-$red: #c60000;
+$white: #fff;
 
 .link {
-  color: $red;
+  color: $white;
   position: relative;
   text-decoration: none;
   &:hover {
@@ -9,16 +9,17 @@ $red: #c60000;
   }
   @media (min-width: 700px) {
     &::before {
-      background-color: $red;
+      background-color: $white;
       bottom: 0;
       content: '';
-      height: 5px;
+      height: 3px;
       left: 0;
       position: absolute;
       transform: scaleX(0);
-      transition: transform .2s ease-in-out;
+      transition: transform .4s ease-in-out;
       visibility: hidden;
       width: 100%;
+      border-radius: 10px;
     }
     &:hover::before {
       transform: scaleX(1);
