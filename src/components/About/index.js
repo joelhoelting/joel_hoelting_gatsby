@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'gatsby-link';
 import Radium from 'radium';
 import Markdown from 'react-markdown';
 
@@ -23,10 +24,18 @@ const About = () => {
     header: {
       textAlign: 'center',
       margin: '20px 0'
+    },
+    resume: {
+      textAlign: 'center',
+      display: 'block',
+      textDecoration: 'underline',
+      fontSize: '2rem',
+      fontFamily: 'Code Bold',
+      color: '#24255d'
     }
   };
 
-  const { container, image, header } = styles;
+  const { container, image, header, resume } = styles;
 
   return (
     <div style={container}>
