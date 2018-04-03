@@ -6,7 +6,7 @@ published: true
 ---
 ## The Numbers Game
 
-For the past 4 months I have been looking for a job as a junior web developer and, although I have not achieved my goal, I have learned a lot about this industry in the process. Failure has forced me to take a long hard look at myself and diagnose my weaknesses. After numerous rejections, I have made some conclusions about the state of the industry and also about the actions I need to take in order to break in. Failure is demoralizing but only if you don't learn anything from it. With the right attitude, a 'no' from a company can be an amazing learning experience and could make you a better developer in the long run. People often refer to dating as a numbers game. Date enough people and eventually you will find that special connection. Looking for a job is the same thing. Failure is baked into the process but eventually someone will say yes.
+For the past 4 months I have been looking for a job as a junior web developer and, although I have not achieved my goal, I have learned a lot about this industry in the process. Failure has forced me to take a long hard look at myself and diagnose my weaknesses. After numerous rejections, I have made some conclusions about the state of the industry and also about the actions I need to take in order to break in. Failure is demoralizing but only if you don't learn anything from it. With the right attitude, a 'no' from a company can be an amazing learning experience and could make you a better developer in the long run. Ultimately looking for a job is a numbers game. The advice I keep receiving: apply to hundreds of jobs expecting rejection each time and eventually someone will say yes.
 
 ## The Junior Developer Catch-22
 
@@ -14,7 +14,7 @@ Bad news first. Every tech company wants to hire developers with years of experi
 
 ## I haven't failed. I've just found 10,000 ways that won't work.
 
-After accepting the unfortunate reality of the state of the industry, what actions can we take to improve our chances of landing the job? That's a question I ask myself every day. 'Failure' helps me because through them I learn the actions I must take to become a more attractive candidate. A 'no' from a company forces me to look at my weaknesses and take action to improve those weak areas.
+After accepting the unfortunate reality of the state of the industry, what actions can we take to improve our chances of landing the job? That's a question I ask myself every day. 'Failure' helps me because I learn the actions I must take to become a more attractive candidate. A 'no' from a company forces me to look at my weaknesses and take action to improve those weak areas.
 
 ### Learn Algorithms
 
@@ -28,15 +28,15 @@ I consider myself a people person and I enjoy spontaneous conversation. Historic
 
 Write down the essential components of your developer story and keep it simple. People don't want to hear you talk about your story for 10 minutes. Writing things down helps a lot. This way you have a small script in the back of your head you can pull out when you get asked this question. Interviewing is a skill. Like any skill it requires practice and ideally you can get that practice in before you actually sit down for the interview. There are meetups dedicated specifically to interview preparation that provide much-needed practice. I've also learned that interviewers respect you when you say, "I don't know". They prefer "I don't know" over a bullshit answer you gave because your ego couldn't admit that you don't know something.
 
-### Give Your Portfolio Love
+### Give Your Portfolio Site Love
 
-Without experience it is important to have a body of work that showcases your skills as a developer. My old portfolio site was a dusty relic that needed to be torn down and rebuilt. Not only was it old and unmaintained, I did not even build it myself. I was using a Jekyll theme. I remember talking to a client for a freelance project and the client telling me my old personal website wasn't that impressive.
+Without experience it is important to have a body of work that showcases your skills as a developer. My old portfolio site was a dusty relic that needed to be torn down and rebuilt. Not only was it old and unmaintained, I was using a theme. I remember talking to a client for a freelance project and the client telling me my old personal website wasn't that impressive.
 
-I built this current site in Gatsby.js and I have spent a good amount of time giving it love. A personal website is a direct reflection of who you are as a developer and it's usually the first thing companies see when they google you. I also realize that I should be developing more. My short-term goal is to build a React/Redux application using Test-Driven Development with Jest/Enzyme. I also have a medium-term goal to built a React/GreenSock app to showcase my frontend skills.
+I built this current site in Gatsby.js and I have spent a good amount of time giving it love. A personal website is a direct reflection of who you are as a developer and it's usually the first thing companies see when they google you. Constant maintenance and attention of your portfolio site is very important. Don't let years pass before changing things up.
 
 ### Practice Self-Discipline
 
-There is no sugar-coating it. Not landing that exciting job sucks. You can either learn from a failure or let it own you. Be careful to avoid reliance on substances or developing bad habits around your failures. It is so important to remain strong in the face of failure and so easy to fall down a rabbit hole of self-pity. Stay connected with family, friends and get advice from people in the industry. Isolation is a one-way ticket to misery.
+There is no sugar-coating it. Not landing that exciting job sucks. You can either learn from a failure or let it own you. Be especially careful of using substances to cope with the emotional roller coaster that is the job hunt. It is so important to remain strong in the face of failure and so easy to fall down a rabbit hole of self-pity and despair. Stay connected with family, friends and get advice from people in the industry. Isolation is a one-way ticket to misery.
 
 ## Ascension Into Developer Heaven
 
