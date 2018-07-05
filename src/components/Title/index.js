@@ -6,6 +6,7 @@ import Radium from 'radium';
 const styles = {
   strokeWidth: '3',
   flexDiv: {
+    width: '100%',
     flex: '1 0 auto',
     '@media (max-width: 600px)': {
       maxWidth: '80%'
